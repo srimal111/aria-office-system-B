@@ -14,26 +14,26 @@
         }
 
         .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 20px;
+        }
 
         .contact-card {
             width: 340px;
             height: 85px;
             border: none;
             display: flex;
-            justify-content: space-between; /* Align items with space between them */
-            align-items: center; /* Center vertically */
+            justify-content: space-between;
+            align-items: center;
             border-radius: 10px;
             background-color: #f0f0f0;
-            margin-bottom: 5px; /* Add margin between cards */
+            margin-bottom: 20px; /* Increased margin between cards */
         }
 
         .contact-details {
@@ -64,22 +64,20 @@
             margin-top: 10px;
         }
 
-        .job-title {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 5px;
+        .disgnation {
+            font-size: x-small;
+            color: gray;
         }
 
-        
         .contact-buttons {
             display: flex;
-            flex-direction: column; /* Align buttons vertically */
-            align-items: flex-end; /* Align buttons to the right */
+            flex-direction: column;
+            align-items: flex-end;
             padding: 10px;
         }
 
         .call-button {
-            margin-top: 5px; /* Add spacing between buttons */
+            margin-top: 5px;
             padding: 5px 10px;
             background-color: rgb(60, 60, 148);
             color: white;
@@ -94,20 +92,16 @@
         p {
             color: gray;
             font-size: x-small;
+            margin: 0; /* Remove default margin */
         }
-        .disgnation{
-            font-size: x-small;
+
+        .st2 {
             color: gray;
         }
-        .st2{
-            color: gray;
-        }
-       
     </style>
 </head>
 <body>
 
-    
     <div class="contact-container">
         <h3 style="text-align:center;"><b>AREA OFFICE - SYSTEM B</b><br><span class="st2">Address: Mahaweli Security Corps, Area Office, System B, Welikanda.</span></h3>
         <div class="contact-card">
@@ -119,8 +113,8 @@
                     <div class="name">Mr.G.G.R.P.Jayaweera<br>
                         <span class="disgnation">Officer In Charge (System B)</span><br>
                         <p>
-                         LandLine : <span id="aca_land">027-2259072</span><br>
-                         Mobile : <span id="aca_mobile">076-8846700</span>                    
+                            LandLine : <span id="aca_land">027-2259072</span><br>
+                            Mobile : <span id="aca_mobile">076-8846700</span>                    
                         </p>
                     </div>
                 </div>
@@ -129,176 +123,129 @@
                 <button class="call-button" onclick="callNumber('aca_land')">Call LandLine</button>
                 <button class="call-button" onclick="callNumber('aca_mobile')">Call Mobile</button>
             </div>
-            <script>
-                function callNumber(number, isMobile = false) {
-                    var prefix = isMobile ? 'tel:' : 'tel:';
-                    window.location.href = prefix + document.getElementById(number).textContent;
-                }
-            </script>
         </div>
-
-
-
-        <!-- Add another card below -->
-       
-    
-        <div class="contact-container">
-            <h3 style="text-align:center;"><b>Detachment Commander</b></h3>
-            <div class="contact-card">
-                <div class="contact-details">
-                    <div class="contact-image-container">
-                        <img class="contact-image" src="one.jpg" alt="Profile Image">
-                    </div>
-                    <div>
-                        <div class="name">Mr.K.A.B.Kumarasinghe<br>
-                            <span class="disgnation">(Welikanda)</span><br>
-                            <p>
-                             LandLine : <span id="dcw_land">027-2259072</span><br>
-                             Mobile : <span id="dcw_mobile">070-3297520</span>                    
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="call-button" onclick="callNumber('dcw_land')">Call LandLine</button>
-                    <button class="call-button" onclick="callNumber('dcw_mobile')">Call Mobile</button>
-                </div>
-                <script>
-                    function callNumber(number, isMobile = false) {
-                        var prefix = isMobile ? 'tel:' : 'tel:';
-                        window.location.href = prefix + document.getElementById(number).textContent;
-                    }
-                </script>
-            </div>
-
-            <div class="contact-container">
-               
-                <div class="contact-card">
-                    <div class="contact-details">
-                        <div class="contact-image-container">
-                            <img class="contact-image" src="one.jpg" alt="Profile Image">
-                        </div>
-                        <div>
-                            <div class="name">Mr.N.K.Japawaththa<br>
-                                <span class="disgnation">(Manampitiya)</span><br>
-                                <p>
-                                
-                                 Mobile : <span id="dcm_mobile">070-3481954</span>                    
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-buttons">
-                      
-                        <button class="call-button" onclick="callNumber('dcm_mobile')">Call Mobile</button>
-                    </div>
-                    <script>
-                        function callNumber(number, isMobile = false) {
-                            var prefix = isMobile ? 'tel:' : 'tel:';
-                            window.location.href = prefix + document.getElementById(number).textContent;
-                        }
-                    </script>
-                </div>
-
-
-                <div class="contact-container">
-                    
-                    <div class="contact-card">
-                        <div class="contact-details">
-                            <div class="contact-image-container">
-                                <img class="contact-image" src="one.jpg" alt="Profile Image">
-                            </div>
-                            <div>
-                                <div class="name">Mr.W.A.M.Thissa<br>
-                                    <span class="disgnation">(Seed Farm)</span><br>
-                                    <p>
-                                     LandLine : <span id="dcs_land">081-3834212</span><br>
-                                     Mobile : <span id="dcs_mobile">071-2495390</span>                    
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-buttons">
-                            <button class="call-button" onclick="callNumber('dcs_land')">Call LandLine</button>
-                            <button class="call-button" onclick="callNumber('dcs_mobile')">Call Mobile</button>
-                        </div>
-                        <script>
-                            function callNumber(number, isMobile = false) {
-                                var prefix = isMobile ? 'tel:' : 'tel:';
-                                window.location.href = prefix + document.getElementById(number).textContent;
-                            }
-                        </script>
-                    </div>
-        
-
-
-                    <div class="contact-container">
-               
-                        <div class="contact-card">
-                            <div class="contact-details">
-                                <div class="contact-image-container">
-                                    <img class="contact-image" src="one.jpg" alt="Profile Image">
-                                </div>
-                                <div>
-                                    <div class="name">Mr.K.A.J.Kaaragala<br>
-                                        <span class="disgnation">(Walamandiya)</span><br>
-                                        <p>
-                                        
-                                         Mobile : <span id="dcw_mobile">076-7690814</span>                    
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contact-buttons">
-                              
-                                <button class="call-button" onclick="callNumber('dcw_mobile')">Call Mobile</button>
-                            </div>
-                            <script>
-                                function callNumber(number, isMobile = false) {
-                                    var prefix = isMobile ? 'tel:' : 'tel:';
-                                    window.location.href = prefix + document.getElementById(number).textContent;
-                                }
-                            </script>
-                        </div>
-
-
-
-                        <div class="contact-container">
-                    
-                            <div class="contact-card">
-                                <div class="contact-details">
-                                    <div class="contact-image-container">
-                                        <img class="contact-image" src="one.jpg" alt="Profile Image">
-                                    </div>
-                                    <div>
-                                        <div class="name">Mr.R.M.R.Lal Kumara<br>
-                                            <span class="disgnation">(Maduru Oya)</span><br>
-                                            <p>
-                                             LandLine : <span id="dcm_land">081-3834212</span><br>
-                                             Mobile : <span id="dcm_mobile">078-6060092</span>                    
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact-buttons">
-                                    <button class="call-button" onclick="callNumber('dcm_land')">Call LandLine</button>
-                                    <button class="call-button" onclick="callNumber('dcm_mobile')">Call Mobile</button>
-                                </div>
-                                <script>
-                                    function callNumber(number, isMobile = false) {
-                                        var prefix = isMobile ? 'tel:' : 'tel:';
-                                        window.location.href = prefix + document.getElementById(number).textContent;
-                                    }
-                                </script>
-                            </div>
-                
-
-
-
-
-
-
     </div>
+
+    <!-- Add another card below -->
+
+    <div class="contact-container">
+        <h3 style="text-align:center;"><b>Detachment Commander</b></h3>
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.K.A.B.Kumarasinghe<br>
+                        <span class="disgnation">(Welikanda)</span><br>
+                        <p>
+                            LandLine : <span id="dcw_land">027-2259072</span><br>
+                            Mobile : <span id="dcw_mobile">070-3297520</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dcw_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('dcw_mobile')">Call Mobile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.N.K.Japawaththa<br>
+                        <span class="disgnation">(Manampitiya)</span><br>
+                        <p>
+                            Mobile : <span id="dcm_mobile">070-3481954</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dcm_mobile')">Call Mobile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.W.A.M.Thissa<br>
+                        <span class="disgnation">(Seed Farm)</span><br>
+                        <p>
+                            LandLine : <span id="dcs_land">081-3834212</span><br>
+                            Mobile : <span id="dcs_mobile">071-2495390</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dcs_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('dcs_mobile')">Call Mobile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.K.A.J.Kaaragala<br>
+                        <span class="disgnation">(Walamandiya)</span><br>
+                        <p>
+                            Mobile : <span id="dcw_mobile">076-7690814</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dcw_mobile')">Call Mobile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.R.M.R.Lal Kumara<br>
+                        <span class="disgnation">(Maduru Oya)</span><br>
+                        <p>
+                            LandLine : <span id="dcm_land">081-3834212</span><br>
+                            Mobile : <span id="dcm_mobile">078-6060092</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dcm_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('dcm_mobile')">Call Mobile</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function callNumber(number, isMobile = false) {
+            var prefix = isMobile ? 'tel:' : 'tel:';
+            window.location.href = prefix + document.getElementById(number).textContent;
+        }
+    </script>
 
 </body>
 </html>
