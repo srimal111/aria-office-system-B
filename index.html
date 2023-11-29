@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-card {
+            width: 340px;
+            height: 85px;
+            border: none;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
+        }
+
+        .contact-details {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .contact-image-container {
+            width: 50px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .contact-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            align-items: flex-end; /* Align buttons to the right */
+            padding: 10px;
+        }
+
+        .call-button {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color: rgb(60, 60, 148);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            font-size: x-small;
+        }
+
+        p {
+            color: gray;
+            font-size: x-small;
+        }
+        .disgnation{
+            font-size: x-small;
+            color: gray;
+        }
+        .st2{
+            color: gray;
+        }
+       
+    </style>
+</head>
+<body>
+
+    
+    <div class="contact-container">
+        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">RUHUNUKETHA</span></h3>
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Ranjith<br>
+                        <span class="disgnation">Circuit Keeper (Ruhunuketha)</span><br>
+                        <p>
+                         Mobile 1 : <span id="cbr_mobile1">078-4502728</span><br>
+                         Mobile 2 : <span id="cbr_mobile2">0776459085</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbr_mobile1')">Call Mobile 1</button>
+                <button class="call-button" onclick="callNumber('cbr_mobile2')">Call Mobile 2</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+
+
+        <!-- Add another card below -->
+       
+        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">PIBURATHTHAWA</span></h3>
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr. Sumanadasa<br>
+                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                        <p>
+                         Mobile : <span id="cbp_mobile">071-5421334</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbp_mobile')">Call Mobile</button>
+              
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+    
+        
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr. Priyantha<br>
+                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                        <p>
+                         Mobile : <span id="cbp2_mobile">'071-2760586</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbp2_mobile')">Call Mobile</button>
+              
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+    
+
+
+
+
+
+    </div>
+
+</body>
+</html>
